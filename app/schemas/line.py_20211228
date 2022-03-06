@@ -1,0 +1,21 @@
+from pydantic import BaseModel
+
+
+class TransactionNft(BaseModel):
+    nftid: str
+    address: str
+
+
+class BuyNft(BaseModel):
+    nftid: int
+    userid: str
+
+
+class NftDrops(BaseModel):
+    userid: str
+    email: str
+
+
+class callBack(BaseModel):
+    type: str
+    data: dict
